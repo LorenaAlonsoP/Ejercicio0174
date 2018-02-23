@@ -37,47 +37,6 @@ public class Persona
     }
 
     /**
-     * Devuelve el nombre de la persona
-     */
-    public String nombrePersona() 
-    {
-        return nombrePersona;
-    }
-
-    /**
-     * Devuelve el sexo de la persona
-     */
-    public boolean sexoPersona() 
-    {
-        sexoPersona = true;
-        return sexoPersona;
-    }
-
-    /**
-     * Devuelve el peso de la persona
-     */
-    public int pesoPersona() 
-    {
-        return pesoPersona;
-    }
-
-    /**
-     * Devuelve el altura de la persona
-     */
-    public int alturaPersona() 
-    {
-        return alturaPersona;
-    }
-
-    /**
-     * Devuelve el edad de la persona
-     */
-    public int edadPersona() 
-    {
-        return edadPersona;
-    }
-
-    /**
      * Devolver numero de calorías ingeridas
      */
     public int getCaloriasIngeridas()
