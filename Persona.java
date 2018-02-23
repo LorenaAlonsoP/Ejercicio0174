@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 /**
  * Write a description of class Persona here.
  *
@@ -67,7 +67,11 @@ public class Persona
     public String contestar(String pregunta) 
     {
         String preguntas = "";
-        if(caloriasIngeridas < metabolismoBasal) {
+        if(caloriasIngeridas >= metabolismoBasal || pregunta.contains(nombrePersona)) {
+            System.out.println(pregunta.toUpperCase());
+            preguntas = pregunta.toUpperCase();
+        }
+        else if(caloriasIngeridas < metabolismoBasal) {
             if(pregunta.length() % 3 == 0) {
                 System.out.println("SI");
                 preguntas = "SI";
@@ -77,12 +81,8 @@ public class Persona
                 preguntas = "NO";
             }
         }
-        else {
-            if(caloriasIngeridas >= metabolismoBasal || pregunta.contains(nombrePersona)) {
-                System.out.println(pregunta.toUpperCase());
-                preguntas = pregunta.toUpperCase();
-            }
-        }
         return preguntas;
     }
+    
+    
 }
