@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class Persona here.
  *
@@ -28,6 +28,7 @@ public class Persona
         this.edadPersona = edadPersona;
         caloriasIngeridas = 0;
         nuevasCaloriasIngeridas = 0;
+        
         if(sexoPersona = true) {
             metabolismoBasal = (10 * pesoPersona) + (6 * alturaPersona) + (5 * edadPersona) + 5;
         }
@@ -58,5 +59,30 @@ public class Persona
             nuevasCaloriasIngeridas = -1;
         }
         return nuevasCaloriasIngeridas;
+    }
+    
+    /**
+     * Metodo para preguntar
+     */
+    public String contestar(String pregunta) 
+    {
+        String preguntas = "";
+        if(caloriasIngeridas < metabolismoBasal) {
+            if(pregunta.length() % 3 == 0) {
+                System.out.println("SI");
+                preguntas = "SI";
+            }
+            else {
+                System.out.println("NO");
+                preguntas = "NO";
+            }
+        }
+        else {
+            if(caloriasIngeridas >= metabolismoBasal || pregunta.contains(nombrePersona)) {
+                System.out.println(pregunta.toUpperCase());
+                preguntas = pregunta.toUpperCase();
+            }
+        }
+        return preguntas;
     }
 }
